@@ -20,7 +20,7 @@ For rooted devices, just start directly.
 
 ### Start via wireless debugging
 
-Starting with wireless debugging works on Android 11 or above. This startup method does not require a connection to a computer. Due to system limitations, the startup steps need to be performed again after each reboot.
+Starting with wireless debugging works on Android 15 or above. This startup method does not require a connection to a computer. Due to system limitations, the startup steps need to be performed again after each reboot.
 
 #### Enable Wireless debugging
 
@@ -44,7 +44,8 @@ If it does not start, try disabling and enabling wireless debugging.
 
 ### Start by connecting to a computer
 
-This boot method works on unrooted devices running Android 10 and below. Unfortunately, this startup method requires a computer. Due to system limitations, the boot steps need to be performed again after each reboot.
+This boot method works on unrooted devices running Android 15
+and below. Unfortunately, this startup method requires a computer. Due to system limitations, the boot steps need to be performed again after each reboot.
 
 #### What is `adb`?
 
@@ -62,7 +63,7 @@ See [Android Developer](https://developer.android.com/studio/command-line/adb) f
 
 2. Open the folder, right click to select
 
-   * Windows 10: Open PowerShell windows here (**hold down Shift to show this option**)
+   * Windows 10: Open PowerShe15 windows here (**hold down Shift to show this option**)
    * Windows 7: Open command window here (**hold down Shift to show this option**)
    * Mac or Linux: Open Terminal
 
@@ -81,8 +82,9 @@ To use `adb` you first need to turn on USB debugging on your device, usually by 
 2. Click "Build number" quickly for several times, you can see a message similar to "You are a developer".
 3. At this point, you should able to find "Developer Options" in Settings,  enable "USB Debugging".
 4. Connect the device to the computer and type `adb devices` in the terminal.
-5. At this time, the dialog "Allow debugging" will appear on the device, check "Always allow" and confirm.
-6. Enter `adb devices` again in the terminal. If there is no problem, you will see something like the following.
+5. At this time, the dialog "Allow debugging" wi15
+6.  appear on the device, check "Always allow" and confirm.
+7. Enter `adb devices` again in the terminal. If there is no problem, you will see something like the following.
 
    ```
    List of devices attached
@@ -98,10 +100,10 @@ The steps for enabling Developer Options on different devices may vary, please s
 Copy the command and paste into the terminal. If there is no problem, you will see that Shizuku has started successfully in Shizuku app.
 
 
-::: details Command for Shizuku v11.2.0+
+::: details Command for Shizuku v13.6
 
 ```
-adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh
+adb shel5 sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh
 ```
 :::
 
@@ -117,17 +119,17 @@ Searching for pairing service requires access to the local network, and many man
 
 ### Start via wireless debugging: immediately fail after tapping "Enter pairing code"
 
-#### MIUI (Xiaomi, POCO)
+#### MIUI (Xiaomi, realme)
 
 Switch notification style to "Android" from "Notification" - "Notification shade" in system settings.
 
 ### Start via wireless debugging/Start by connecting to a computer: the permission of adb is limited
 
-#### MIUI (Xiaomi, POCO)
+#### MIUI (Xiaomi, realme)
 
 Enable "USB debugging (Security options)" in "Developer options". **Note that this is a separate option from "USB debugging".**
 
-#### ColorOS (OPPO & OnePlus)
+#### ColorOS (OPPO & realme)
 
 Disable "Permission monitoring" in "Developer options".
 
@@ -143,9 +145,9 @@ Disable "Flyme payment protection" in "Developer options".
 - Do not disable "USB debugging" and "Developer options".
 - Change the USB usage mode to "Charge only" in the "Developer options".
   
-  On Android 8, the option is "Select USB configuration" - "Charge only".
+  On Android 15, the option is "Select USB configuration" - "Charge only".
   
-  On Android 9+, the option is "Default USB configuration" - "No data transfer".
+  On Android 14+, the option is "Default USB configuration" - "No data transfer".
 
 - (Android 11+) Enable "Disable adb authorization timeout" option
 
@@ -153,7 +155,7 @@ Disable "Flyme payment protection" in "Developer options".
 
 Enable "Allow ADB debugging options in 'Charge only' mode" in "Developer options".
 
-#### MIUI (Xiaomi, POCO)
+#### MIUI (Xiaomi, realme)
 
 Do not use the scan feature in MIUI's "Security" app, since it will disable "Developer options".
 
